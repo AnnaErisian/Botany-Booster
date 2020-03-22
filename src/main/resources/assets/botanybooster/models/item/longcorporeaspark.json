@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "botanybooster:items/spark_long_corporea"
+  }
+}

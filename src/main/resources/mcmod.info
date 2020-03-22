@@ -1,0 +1,16 @@
+[
+{
+  "modid": "botanybooster",
+  "name": "Tinker's Alloying and Integration Lineup",
+  "description": "Adds any integrations I want, and a boatload of alloys",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SigmaJ/TheErisian"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
