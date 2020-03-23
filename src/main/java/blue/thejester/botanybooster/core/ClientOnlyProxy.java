@@ -2,6 +2,7 @@ package blue.thejester.botanybooster.core;
 
 import blue.thejester.botanybooster.BotanyBooster;
 import blue.thejester.botanybooster.block.subtile.functional.SubTileDryacinth;
+import blue.thejester.botanybooster.block.subtile.functional.SubTileOrechidCunctus;
 import blue.thejester.botanybooster.client.RenderLongCorporeaSpark;
 import blue.thejester.botanybooster.entity.EntityLongCorporeaSpark;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -29,6 +30,7 @@ public class ClientOnlyProxy extends CommonProxy {
     @SubscribeEvent
     public static void onModelRegistry(ModelRegistryEvent e) {
         BotaniaAPIClient.registerSubtileModel(SubTileDryacinth.class, new ModelResourceLocation(BotanyBooster.MODID + ":dryacinth"));
+        BotaniaAPIClient.registerSubtileModel(SubTileOrechidCunctus.class, new ModelResourceLocation(BotanyBooster.MODID + ":orechidCunctus"));
     }
 
     @Override

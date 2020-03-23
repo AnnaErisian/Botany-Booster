@@ -2,6 +2,7 @@ package blue.thejester.botanybooster.block;
 
 import blue.thejester.botanybooster.BotanyBooster;
 import blue.thejester.botanybooster.block.subtile.functional.SubTileDryacinth;
+import blue.thejester.botanybooster.block.subtile.functional.SubTileOrechidCunctus;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent;
@@ -22,5 +23,14 @@ public class Blocks {
             }
         });
         BotaniaAPI.addSubTileToCreativeMenu("dryacinth");
+
+        BotaniaAPI.registerSubTile("orechidCunctus", SubTileOrechidCunctus.class);
+        BotaniaAPI.registerSubTileSignature(SubTileOrechidCunctus.class, new BasicSignature("orechidCunctus") {
+            @Override
+            public String getUnlocalizedLoreTextForStack(ItemStack stack) {
+                return "tile.botania.flower.orechidCunctus.lore";
+            }
+        });
+        BotaniaAPI.addSubTileToCreativeMenu("orechidCunctus");
     }
 }
