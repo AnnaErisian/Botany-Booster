@@ -1,0 +1,33 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"base": "botanybooster:blocks/arrayed_crystal_cube_base",
+			"cloth": "botanybooster:blocks/arrayed_crystal_cube_cloth",
+			"glass": "botanybooster:blocks/arrayed_crystal_cube_glass",
+			"particle": "botanybooster:blocks/arrayed_crystal_cube_base"
+		}
+	},
+	"variants": {
+		"static": {
+			"true": {
+				"model": "botanybooster:arrayed_crystal_cube_base"
+			},
+			"false": {
+				"model": "botanybooster:arrayed_crystal_cube_glass"
+			}
+		},
+		"inventory": [{
+			"model": "botanybooster:arrayed_crystal_cube_base",
+			"transform": "forge:default-block",
+			"submodel": {
+				"cube": {
+					"model": "botanybooster:arrayed_crystal_cube_glass",
+					"transform": {
+						"translation": [ 0, 0.5, 0 ]
+					}
+				}
+			}
+		}]
+	}
+}

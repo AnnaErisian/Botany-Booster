@@ -27,6 +27,7 @@ import java.util.List;
 
 public class ItemLaunchLens extends Item implements ICompositableLens {
 
+
     public ItemLaunchLens() {
         setRegistryName(new ResourceLocation(BotanyBooster.MODID, "launchLens"));
         setTranslationKey("launchLens");
@@ -93,7 +94,7 @@ public class ItemLaunchLens extends Item implements ICompositableLens {
     public void updateBurst(IManaBurst burst, ItemStack stack) {
         EntityThrowable entity = (EntityThrowable) burst;
         if(!burst.isFake()) {
-            double range = 3.5;
+            double range = 4.5;
             AxisAlignedBB bounds = new AxisAlignedBB(entity.posX - range, entity.posY - range, entity.posZ - range, entity.posX + range, entity.posY + range, entity.posZ + range);
             List<Entity> movables = entity.world.getEntitiesWithinAABB(EntityPlayer.class, bounds);
             for(Entity movable : movables) {
@@ -107,9 +108,9 @@ public class ItemLaunchLens extends Item implements ICompositableLens {
                     double xd = -(movable.posX - ((EntityThrowable) burst).posX);
                     double yd = -(movable.posY - ((EntityThrowable) burst).posY);
                     double zd = -(movable.posZ - ((EntityThrowable) burst).posZ);
-                    movable.motionX += xd/1;
-                    movable.motionY += yd/1;
-                    movable.motionZ += zd/1;
+                    movable.motionX += xd/8;
+                    movable.motionY += yd/8;
+                    movable.motionZ += zd/8;
                     ((EntityPlayer)movable).velocityChanged = true;
                 }
             }
