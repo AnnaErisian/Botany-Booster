@@ -49,8 +49,63 @@ public class ClassTransformer implements IClassTransformer
 			transformations++;
 			return patchEntityRenderer(basicClass);
 		}
+		else if (transformedName.equals("vazkii.botania.common.entity.EntityManaBurst"))
+		{
+			transformations++;
+			return patchManaBurst(basicClass);
+		}
 
 		return basicClass;
+	}
+
+	private byte[] patchManaBurst(byte[] basicClass) {
+		ClassNode classNode = new ClassNode();
+		ClassReader classReader = new ClassReader(basicClass);
+		classReader.accept(classNode, 0);
+		logger.log(Level.DEBUG, "Found EntityManaBurst Class: " + classNode.name);
+
+		MethodNode playerConstructor = null;
+
+		for (MethodNode mn : classNode.methods)
+		{
+			//The constructor that takes a player and a hand
+			if (mn.desc.equals("(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/EnumHand;)V"))
+			{
+				playerConstructor = mn;
+			}
+		}
+
+		if (playerConstructor != null)
+		{
+			logger.log(Level.DEBUG, "- Found playerConstructor (4/5)");
+
+			InsnList toInsert = new InsnList();
+
+			AbstractInsnNode thisCallNode = null;
+			for (int i = 0; i < playerConstructor.instructions.size(); i++)
+			{
+				AbstractInsnNode ain = playerConstructor.instructions.get(i);
+
+				if (ain.getOpcode() == INVOKESPECIAL)
+				{
+					thisCallNode = ain;
+				}
+			}
+
+			//Load the Player onto the stack
+			toInsert.add(new VarInsnNode(ALOAD, 0));
+			toInsert.add(new VarInsnNode(ALOAD, 1));
+			//Set it to the thrower field
+			toInsert.add(new FieldInsnNode(PUTFIELD, "net/minecraft/entity/projectile/EntityThrowable", DevMappings.get("field_70192_c"), "Lnet/minecraft/entity/EntityLivingBase;"));
+//			toInsert.add(new FieldInsnNode(PUTFIELD, "vazkii/botania/common/entity/EntityManaBurst", DevMappings.get("field_70192_c"), "Lnet/minecraft/entity/EntityPlayer;"));
+			toInsert.add(new LabelNode(new Label()));
+			playerConstructor.instructions.insert(thisCallNode, toInsert);
+		}
+
+		CustomClassWriter writer = new CustomClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
+		classNode.accept(writer);
+
+		return writer.toByteArray();
 	}
 
 	private byte[] patchWorldClass(byte[] basicClass)
