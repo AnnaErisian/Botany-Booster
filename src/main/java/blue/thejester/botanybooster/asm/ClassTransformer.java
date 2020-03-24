@@ -1,6 +1,6 @@
 package blue.thejester.botanybooster.asm;
 
-import blue.thejester.botanybooster.asm.names.DevMappings;
+import blue.thejester.botanybooster.asm.names.ObfuscatedName;
 import net.minecraft.launchwrapper.IClassTransformer;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -96,8 +96,8 @@ public class ClassTransformer implements IClassTransformer
 			toInsert.add(new VarInsnNode(ALOAD, 0));
 			toInsert.add(new VarInsnNode(ALOAD, 1));
 			//Set it to the thrower field
-			toInsert.add(new FieldInsnNode(PUTFIELD, "net/minecraft/entity/projectile/EntityThrowable", DevMappings.get("field_70192_c"), "Lnet/minecraft/entity/EntityLivingBase;"));
-//			toInsert.add(new FieldInsnNode(PUTFIELD, "vazkii/botania/common/entity/EntityManaBurst", DevMappings.get("field_70192_c"), "Lnet/minecraft/entity/EntityPlayer;"));
+			toInsert.add(new FieldInsnNode(PUTFIELD, "net/minecraft/entity/projectile/EntityThrowable", new ObfuscatedName("field_70192_c").get(), "Lnet/minecraft/entity/EntityLivingBase;"));
+//			toInsert.add(new FieldInsnNode(PUTFIELD, "vazkii/botania/common/entity/EntityManaBurst", new ObfuscatedName("field_70192_c").get(), "Lnet/minecraft/entity/EntityPlayer;"));
 			toInsert.add(new LabelNode(new Label()));
 			playerConstructor.instructions.insert(thisCallNode, toInsert);
 		}
@@ -123,11 +123,11 @@ public class ClassTransformer implements IClassTransformer
 
 		for (MethodNode mn : classNode.methods)
 		{
-			if (mn.name.equals(DevMappings.get("func_175727_C")))
+			if (mn.name.equals(new ObfuscatedName("func_175727_C").get()))
 			{
 				isRainingAt = mn;
 			}
-			else if (mn.name.equals(DevMappings.get("func_175708_f")))
+			else if (mn.name.equals(new ObfuscatedName("func_175708_f").get()))
 			{
 				canSnowAt = mn;
 			}
@@ -210,11 +210,11 @@ public class ClassTransformer implements IClassTransformer
 
 		for (MethodNode mn : classNode.methods)
 		{
-			if (mn.name.equals(DevMappings.get("func_78474_d")))
+			if (mn.name.equals(new ObfuscatedName("func_78474_d").get()))
 			{
 				renderRainSnow = mn;
 			}
-			else if (mn.name.equals(DevMappings.get("func_78484_h")))
+			else if (mn.name.equals(new ObfuscatedName("func_78484_h").get()))
 			{
 				addRainParticles = mn;
 			}
@@ -232,14 +232,14 @@ public class ClassTransformer implements IClassTransformer
 				{
 					MethodInsnNode min = (MethodInsnNode) ain;
 
-					if (min.name.equals(DevMappings.get("func_76738_d")))
+					if (min.name.equals(new ObfuscatedName("func_76738_d").get()))
 					{
 						logger.log(Level.DEBUG, "- Found canRain");
 
 						insnPoint = (VarInsnNode) renderRainSnow.instructions.get(i - 1);
 					}
 
-					if (min.name.equals(DevMappings.get("func_76746_c")))
+					if (min.name.equals(new ObfuscatedName("func_76746_c").get()))
 					{
 						logger.log(Level.DEBUG, "- Found getEnableSnow");
 						int jumpCounter = i + 1;

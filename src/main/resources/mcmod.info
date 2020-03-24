@@ -1,8 +1,8 @@
 [
 {
   "modid": "botanybooster",
-  "name": "Tinker's Alloying and Integration Lineup",
-  "description": "Adds any integrations I want, and a boatload of alloys",
+  "name": "Botany Booster",
+  "description": "Random things I wanted to have, via Botania",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

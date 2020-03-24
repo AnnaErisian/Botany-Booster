@@ -3,6 +3,7 @@ package blue.thejester.botanybooster.core;
 import blue.thejester.botanybooster.BotanyBooster;
 import blue.thejester.botanybooster.block.subtile.functional.SubTileDryacinth;
 import blue.thejester.botanybooster.block.subtile.functional.SubTileOrechidCunctus;
+import blue.thejester.botanybooster.entity.EntityBallosBall;
 import blue.thejester.botanybooster.entity.EntityLongCorporeaSpark;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
@@ -25,10 +26,10 @@ public class CommonProxy {
      * Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry
      */
     public void preInit() {
-
         ResourceLocation lrcs_name = new ResourceLocation(BotanyBooster.MODID, "long-range-corporea-spark");
         EntityRegistry.registerModEntity(lrcs_name, EntityLongCorporeaSpark.class, "long-range-corporea-spark", 0, BotanyBooster.instance, 64, 10, false);
-
+        ResourceLocation ballos_ball_name = new ResourceLocation(BotanyBooster.MODID, "ballos-ball");
+        EntityRegistry.registerModEntity(ballos_ball_name, EntityBallosBall.class, "ballos-ball", 1, BotanyBooster.instance, 16, 3, true);
     }
 
     /**

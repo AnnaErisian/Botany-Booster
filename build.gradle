@@ -85,6 +85,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     deobfCompile "baubles:Baubles:1.12:1.5.2"
+//    compile files("./libs/ElectroblobsWizardry-4.2.9-MC1.12.2.jar")
     //compile files("./libs/CraftTweaker2-1.12-4.1.19.jar")
     //compile files("./libs/aether_legacy-1.12.2-v1.4.4.jar")
     //compile files("./libs/astralsorcery-1.12.2-1.10.20.jar")

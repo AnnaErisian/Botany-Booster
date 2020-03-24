@@ -10,7 +10,7 @@
  */
 package blue.thejester.botanybooster.client;
 
-import blue.thejester.botanybooster.asm.names.DevMappings;
+import blue.thejester.botanybooster.asm.names.ObfuscatedName;
 import blue.thejester.botanybooster.block.tile.TileArrayedCrystalCube;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -53,7 +53,7 @@ public class RenderTileArrayedCrystalCube extends TileEntitySpecialRenderer<Tile
 
 	{
 		try {
-			entityItemAge = EntityItem.class.getDeclaredField(DevMappings.get("field_70292_b"));
+			entityItemAge = EntityItem.class.getDeclaredField(new ObfuscatedName("field_70292_b").get());
 			entityItemAge.setAccessible(true);
 		} catch (NoSuchFieldException e) {
 			e.printStackTrace();
