@@ -2,6 +2,7 @@ package blue.thejester.botanybooster.item;
 
 import blue.thejester.botanybooster.BotanyBooster;
 import blue.thejester.botanybooster.item.bauble.ItemBallosCrown;
+import blue.thejester.botanybooster.item.bauble.ItemBreederEye;
 import blue.thejester.botanybooster.item.bauble.ItemCrownOfAtlantis;
 import blue.thejester.botanybooster.item.bauble.ItemTinyWizardHat;
 import net.minecraft.item.Item;
@@ -17,6 +18,7 @@ public class Items {
     public static final Item launchLens = new ItemLaunchLens();
     public static final Item flyLens = new ItemFlyLens();
     public static final Item crownOfAtlantis = new ItemCrownOfAtlantis();
+    public static final Item eyeOfHathor = new ItemBreederEye();
     public static final Item tinyWizardHat;
     static {
         if(Loader.isModLoaded("ebwizardry")) {
@@ -35,6 +37,7 @@ public class Items {
         registerItem(evt, crownOfAtlantis);
         registerItem(evt, tinyWizardHat);
         registerItem(evt, ballosCrown);
+        registerItem(evt, eyeOfHathor);
     }
 
     private static void registerItem(RegistryEvent.Register<Item> evt, Item item) {
