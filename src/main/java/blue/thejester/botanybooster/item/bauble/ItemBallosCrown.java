@@ -3,6 +3,7 @@ package blue.thejester.botanybooster.item.bauble;
 import baubles.api.BaubleType;
 import baubles.api.BaublesApi;
 import blue.thejester.botanybooster.BotanyBooster;
+import blue.thejester.botanybooster.api.BaubleSlots;
 import blue.thejester.botanybooster.entity.EntityBallosBall;
 import electroblob.wizardry.item.IManaStoringItem;
 import electroblob.wizardry.util.WizardryUtilities;
@@ -27,7 +28,7 @@ import vazkii.botania.common.item.equipment.armor.elementium.ItemElementiumHelm;
  * The majority of the logic here is equivalent to the PixieHandler from Botania
  * And as such was written by Vazkii
  */
-public class ItemBallosCrown extends BaubleBaseItem implements IManaUsingItem {
+public class ItemBallosCrown extends BaubleBaseItem {
 
     public ItemBallosCrown() {
         super("ballos_crown");
@@ -40,7 +41,7 @@ public class ItemBallosCrown extends BaubleBaseItem implements IManaUsingItem {
                 && event.getEntityLiving() instanceof EntityPlayer
                 && event.getSource().getTrueSource() instanceof EntityLivingBase) {
             EntityPlayer player = (EntityPlayer) event.getEntityLiving();
-            ItemStack crown = BaublesApi.getBaublesHandler(player).getStackInSlot(4);
+            ItemStack crown = BaublesApi.getBaublesHandler(player).getStackInSlot(BaubleSlots.HEAD);
 
             if(!crown.isEmpty() && crown.getItem() == this) {
                 if(Math.random() < 0.25) {
@@ -57,11 +58,6 @@ public class ItemBallosCrown extends BaubleBaseItem implements IManaUsingItem {
     @Override
     public BaubleType getBaubleType(ItemStack arg0) {
         return BaubleType.HEAD;
-    }
-
-    @Override
-    public boolean usesMana(ItemStack stack) {
-        return true;
     }
 
 }
