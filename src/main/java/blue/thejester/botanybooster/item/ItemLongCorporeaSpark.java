@@ -35,22 +35,11 @@ import vazkii.botania.client.render.IModelRegister;
 
 import javax.annotation.Nonnull;
 
-public class ItemLongCorporeaSpark extends Item implements IModelRegister {
+public class ItemLongCorporeaSpark extends BaseItem implements IModelRegister {
 
 	public ItemLongCorporeaSpark() {
 		setRegistryName(new ResourceLocation(BotanyBooster.MODID, "longCorporeaSpark"));
 		setTranslationKey("longCorporeaSpark");
-	}
-
-	@Nonnull
-	@Override
-	public String getUnlocalizedNameInefficiently(@Nonnull ItemStack par1ItemStack) {
-		return super.getUnlocalizedNameInefficiently(par1ItemStack).replaceAll("item\\.", "item." + BotanyBooster.MODID);
-	}
-
-	@Override
-	public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> list) {
-
 	}
 
 	@Nonnull
@@ -72,18 +61,6 @@ public class ItemLongCorporeaSpark extends Item implements IModelRegister {
 			return EnumActionResult.SUCCESS;
 		}
 		return EnumActionResult.PASS;
-	}
-
-	@Nonnull
-	@Override
-	public String getTranslationKey(ItemStack stack) {
-		return super.getTranslationKey(stack) + stack.getItemDamage();
-	}
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	public void registerModels() {
-		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(BotanyBooster.MODID + ":longcorporeaspark" , "inventory"));
 	}
 
 }

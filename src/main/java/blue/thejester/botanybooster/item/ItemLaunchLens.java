@@ -25,7 +25,7 @@ import vazkii.botania.common.item.lens.LensInfluence;
 
 import java.util.List;
 
-public class ItemLaunchLens extends Item implements ICompositableLens {
+public class ItemLaunchLens extends BaseItem implements ICompositableLens {
 
 
     public ItemLaunchLens() {

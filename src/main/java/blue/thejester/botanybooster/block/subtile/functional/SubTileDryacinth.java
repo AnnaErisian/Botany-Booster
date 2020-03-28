@@ -1,5 +1,6 @@
 package blue.thejester.botanybooster.block.subtile.functional;
 
+import blue.thejester.botanybooster.core.LexiconData;
 import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.SoundCategory;
@@ -17,6 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class SubTileDryacinth extends SubTileFunctional {
 
+    public static final String NAME = "dryacinth";
     private static String TAG_ACTIVE = "isRainShielding";
 
     public SubTileDryacinth() {
@@ -26,7 +28,6 @@ public class SubTileDryacinth extends SubTileFunctional {
         this.active = false;
     }
 
-    public static LexiconEntry lexicon;
 
     public static Set<SubTileDryacinth> shields = Collections.newSetFromMap(new WeakHashMap());
 
@@ -85,7 +86,7 @@ public class SubTileDryacinth extends SubTileFunctional {
 
     @Override
     public LexiconEntry getEntry() {
-        return lexicon;
+        return LexiconData.dryacinth;
     }
 
     public static boolean shouldRain(World world, BlockPos pos)

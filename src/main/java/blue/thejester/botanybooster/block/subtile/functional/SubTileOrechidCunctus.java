@@ -1,6 +1,7 @@
 package blue.thejester.botanybooster.block.subtile.functional;
 
 import blue.thejester.botanybooster.config.BotanyBoosterConfig;
+import blue.thejester.botanybooster.core.LexiconData;
 import com.google.common.base.Predicate;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStone;
@@ -21,13 +22,13 @@ import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.subtile.functional.SubTileOrechid;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.handler.ModSounds;
-import vazkii.botania.common.lexicon.LexiconData;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class SubTileOrechidCunctus extends SubTileFunctional {
 
+    public static final String NAME = "orechidCunctus";
     public static LexiconEntry lexicon;
 
     private static final int COST = 17500;
@@ -159,7 +160,7 @@ public class SubTileOrechidCunctus extends SubTileFunctional {
 
     @Override
     public LexiconEntry getEntry() {
-        return LexiconData.orechid;
+        return LexiconData.orechidCunctus;
     }
 
     private static class StringRandomItem extends WeightedRandom.Item {

@@ -3,6 +3,7 @@ package blue.thejester.botanybooster.item;
 import blue.thejester.botanybooster.BotanyBooster;
 import blue.thejester.botanybooster.item.bauble.*;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
@@ -24,6 +25,7 @@ public class Items {
     public static final Item basiliskHarness = new ItemBasiliskHarness();
     public static final Item livingOil = new ItemLivingOil();
     public static final Item coatOfArms = new ItemCoatOfArms();
+    public static final Item stabilizingSash = new ItemStabilizingSash();
     public static final Item tinyWizardHat;
     static {
         if(Loader.isModLoaded("ebwizardry")) {
@@ -49,6 +51,7 @@ public class Items {
         registerItem(evt, basiliskHarness);
         registerItem(evt, livingOil);
         registerItem(evt, coatOfArms);
+        registerItem(evt, stabilizingSash);
     }
 
     private static void registerItem(RegistryEvent.Register<Item> evt, Item item) {

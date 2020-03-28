@@ -18,7 +18,7 @@ import vazkii.botania.common.item.lens.ItemLens;
 
 import java.util.List;
 
-public class ItemFlyLens extends Item implements ICompositableLens {
+public class ItemFlyLens extends BaseItem implements ICompositableLens {
 
     public ItemFlyLens() {
         setRegistryName(new ResourceLocation(BotanyBooster.MODID, "flyLens"));

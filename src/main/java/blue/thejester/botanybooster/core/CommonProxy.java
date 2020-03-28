@@ -5,6 +5,7 @@ import blue.thejester.botanybooster.block.subtile.functional.SubTileDryacinth;
 import blue.thejester.botanybooster.block.subtile.functional.SubTileOrechidCunctus;
 import blue.thejester.botanybooster.entity.EntityBallosBall;
 import blue.thejester.botanybooster.entity.EntityLongCorporeaSpark;
+import blue.thejester.botanybooster.recipe.ModPetalRecipe;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -18,9 +19,6 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.signature.BasicSignature;
 
 public class CommonProxy {
-
-    public static ItemStack dryacinth;
-    public static ItemStack orechidCunctus;
 
     /**
      * Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry
@@ -37,17 +35,8 @@ public class CommonProxy {
      * send FMLInterModComms messages to other mods.
      */
     public void init() {
-        SubTileDryacinth.lexicon = new LexiconEntry("dryacinth", BotaniaAPI.categoryGenerationFlowers);
-        SubTileDryacinth.lexicon.setLexiconPages(
-                BotaniaAPI.internalHandler.textPage("botania.lexicon.dryacinth.0")
-        );
-        SubTileDryacinth.lexicon.setIcon(dryacinth);
-
-        SubTileOrechidCunctus.lexicon = new LexiconEntry("orechidCunctus", BotaniaAPI.categoryGenerationFlowers);
-        SubTileOrechidCunctus.lexicon.setLexiconPages(
-                BotaniaAPI.internalHandler.textPage("botania.lexicon.orechidCunctus.0")
-        );
-        SubTileOrechidCunctus.lexicon.setIcon(orechidCunctus);
+        ModPetalRecipe.init();
+        LexiconData.init();
     }
 
     /**

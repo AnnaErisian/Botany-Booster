@@ -23,23 +23,23 @@ public class Blocks {
 
     @SubscribeEvent
     public static void onBlockRegistry(RegistryEvent.Register<Block> e) {
-        BotaniaAPI.registerSubTile("dryacinth", SubTileDryacinth.class);
-        BotaniaAPI.registerSubTileSignature(SubTileDryacinth.class, new BasicSignature("dryacinth") {
+        BotaniaAPI.registerSubTile(SubTileDryacinth.NAME, SubTileDryacinth.class);
+        BotaniaAPI.registerSubTileSignature(SubTileDryacinth.class, new BasicSignature(SubTileDryacinth.NAME) {
             @Override
             public String getUnlocalizedLoreTextForStack(ItemStack stack) {
                 return "tile.botania.flower.dryacinth.lore";
             }
         });
-        BotaniaAPI.addSubTileToCreativeMenu("dryacinth");
+        BotaniaAPI.addSubTileToCreativeMenu(SubTileDryacinth.NAME);
 
-        BotaniaAPI.registerSubTile("orechidCunctus", SubTileOrechidCunctus.class);
-        BotaniaAPI.registerSubTileSignature(SubTileOrechidCunctus.class, new BasicSignature("orechidCunctus") {
+        BotaniaAPI.registerSubTile(SubTileOrechidCunctus.NAME, SubTileOrechidCunctus.class);
+        BotaniaAPI.registerSubTileSignature(SubTileOrechidCunctus.class, new BasicSignature(SubTileOrechidCunctus.NAME) {
             @Override
             public String getUnlocalizedLoreTextForStack(ItemStack stack) {
                 return "tile.botania.flower.orechidCunctus.lore";
             }
         });
-        BotaniaAPI.addSubTileToCreativeMenu("orechidCunctus");
+        BotaniaAPI.addSubTileToCreativeMenu(SubTileOrechidCunctus.NAME);
 
         e.getRegistry().register(corporeaArrayedCrystalCube);
     }

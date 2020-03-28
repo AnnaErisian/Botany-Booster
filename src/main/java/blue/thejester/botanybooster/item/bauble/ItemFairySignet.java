@@ -16,8 +16,11 @@ import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import vazkii.botania.api.mana.IManaUsingItem;
+import vazkii.botania.api.mana.ManaItemHandler;
 
 public class ItemFairySignet extends BaubleBaseItem implements IManaUsingItem {
+
+    private static final int COST = 100;
 
     public ItemFairySignet() {
         super("fairy_signet");
@@ -30,7 +33,7 @@ public class ItemFairySignet extends BaubleBaseItem implements IManaUsingItem {
 //            if(!event.getRayTraceResult().entityHit.world.isRemote) {
                 EntityPlayer player = (EntityPlayer) event.getRayTraceResult().entityHit;
                 ItemStack charm = BaublesApi.getBaublesHandler(player).getStackInSlot(BaubleSlots.CHARM);
-                if(!charm.isEmpty() && charm.getItem() == this) {
+                if(!charm.isEmpty() && charm.getItem() == this &&  ManaItemHandler.requestManaExact(charm, player, COST, false)) {
                     Entity projectile = event.getEntity();
                     projectile.motionX *= -1;
                     projectile.motionY *= -1;
@@ -38,6 +41,7 @@ public class ItemFairySignet extends BaubleBaseItem implements IManaUsingItem {
                     if(event.isCancelable()) {
                         event.setCanceled(true);
                     }
+                    ManaItemHandler.requestManaExact(charm, player, COST, true);
                 }
 //            }
         }
