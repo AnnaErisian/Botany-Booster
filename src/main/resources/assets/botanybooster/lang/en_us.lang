@@ -1,5 +1,12 @@
 tile.botania:flower.dryacinth.name=Dryacinth
 tile.botania:flower.orechidCunctus.name=Orechid Cunctus
+tile.botania:second_sun_core0.name=Second Sun (Tier 0)
+tile.botania:second_sun_core1.name=Second Sun (Tier 1)
+tile.botania:second_sun_core2.name=Second Sun (Tier 2)
+tile.botania:second_sun_core3.name=Second Sun (Tier 3)
+tile.botania:second_sun_core4.name=Second Sun (Tier 4)
+tile.botania:second_sun_core5.name=Second Sun (Tier 5)
+tile.botania:second_sun_core6.name=Second Sun (Tier 6)
 
 tile.botania:arrayed_crystal_cube.name=Clear Crystal Cube
 

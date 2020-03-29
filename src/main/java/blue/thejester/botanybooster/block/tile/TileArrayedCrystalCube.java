@@ -17,6 +17,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.model.animation.CapabilityAnimation;
@@ -48,7 +49,7 @@ public class TileArrayedCrystalCube extends TileCorporeaBase implements ICorpore
 
 	public TileArrayedCrystalCube() {
 		if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
-			asm = ModelLoaderRegistry.loadASM(new ResourceLocation("botanybooster", "asms/block/arrayed_crystal_cube.json"), ImmutableMap.of());
+			asm = ModelLoaderRegistry.loadASM(new ResourceLocation("botanybooster", "asms/block/second_sun.json"), ImmutableMap.of());
 		} else {
 			asm = null;
 		}

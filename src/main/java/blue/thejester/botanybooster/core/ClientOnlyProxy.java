@@ -4,9 +4,11 @@ import blue.thejester.botanybooster.BotanyBooster;
 import blue.thejester.botanybooster.block.subtile.functional.SubTileDryacinth;
 import blue.thejester.botanybooster.block.subtile.functional.SubTileOrechidCunctus;
 import blue.thejester.botanybooster.block.tile.TileArrayedCrystalCube;
+import blue.thejester.botanybooster.block.tile.TileSecondSun;
 import blue.thejester.botanybooster.client.RenderBallosBall;
 import blue.thejester.botanybooster.client.RenderLongCorporeaSpark;
 import blue.thejester.botanybooster.client.RenderTileArrayedCrystalCube;
+import blue.thejester.botanybooster.client.RenderTileSecondSun;
 import blue.thejester.botanybooster.entity.EntityBallosBall;
 import blue.thejester.botanybooster.entity.EntityLongCorporeaSpark;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -28,6 +30,7 @@ public class ClientOnlyProxy extends CommonProxy {
         MinecraftForge.EVENT_BUS.register(MiscellaneousIcons.INSTANCE);
 
         ClientRegistry.bindTileEntitySpecialRenderer(TileArrayedCrystalCube.class, new RenderTileArrayedCrystalCube());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileSecondSun.class, new RenderTileSecondSun());
 
         RenderingRegistry.registerEntityRenderingHandler(EntityBallosBall.class, RenderBallosBall::new);
 
