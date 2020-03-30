@@ -20,10 +20,11 @@ import vazkii.botania.api.mana.ManaItemHandler;
 
 public class ItemFairySignet extends BaubleBaseItem implements IManaUsingItem {
 
-    private static final int COST = 100;
+    private static final int COST = 200;
+    public static final String NAME = "fairy_signet";
 
     public ItemFairySignet() {
-        super("fairy_signet");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

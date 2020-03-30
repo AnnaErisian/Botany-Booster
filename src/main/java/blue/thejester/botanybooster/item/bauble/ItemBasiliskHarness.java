@@ -18,8 +18,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ItemBasiliskHarness extends BaubleBaseItem {
 
+    public static final String NAME = "basilisk_harness";
+
     public ItemBasiliskHarness() {
-        super("basilisk_harness");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

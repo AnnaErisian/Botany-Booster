@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "botanybooster:belt_leaping"
+  },
+  "pattern": [
+    "AL ",
+    "L L",
+    "ILS"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "L": {
+      "item": "#LEATHER"
+    },
+    "A": {
+      "item": "#RUNEAIRB"
+    },
+    "S": {
+      "item": "#RUNESUMMERB"
+    },
+    "I": {
+      "item": "#INGOTMANASTEEL"
+    }
+  }
+}

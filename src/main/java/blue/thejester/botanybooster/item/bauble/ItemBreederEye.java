@@ -23,9 +23,10 @@ import java.util.List;
 public class ItemBreederEye extends BaubleBaseItem{
 
     private static final String TAG_ENTITY_POSITIONS = "highlightPositionsEnt";
+    public static final String NAME = "eye_of_hathor";
 
     public ItemBreederEye() {
-        super("eye_of_hathor");
+        super(NAME);
     }
 
     @Override

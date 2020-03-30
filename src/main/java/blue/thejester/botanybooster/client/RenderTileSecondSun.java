@@ -41,7 +41,15 @@ public class RenderTileSecondSun extends TileEntitySpecialRenderer<TileSecondSun
     private static float[] shellRadius = {0.8f,1.0f,1.3f,1.7f,2.1f,2.5f,3.2f};
 
     private static final ResourceLocation mana_tex = new ResourceLocation("botanybooster:textures/blocks/second_sun_core.png");
-    private static final ResourceLocation glass_tex = new ResourceLocation("botanybooster:textures/blocks/second_sun_glass.png");
+    private static final ResourceLocation[] glass_tex = {
+            new ResourceLocation("botanybooster:textures/blocks/second_sun_glass_0.png"),
+            new ResourceLocation("botanybooster:textures/blocks/second_sun_glass_1.png"),
+            new ResourceLocation("botanybooster:textures/blocks/second_sun_glass_2.png"),
+            new ResourceLocation("botanybooster:textures/blocks/second_sun_glass_3.png"),
+            new ResourceLocation("botanybooster:textures/blocks/second_sun_glass_4.png"),
+            new ResourceLocation("botanybooster:textures/blocks/second_sun_glass_5.png"),
+            new ResourceLocation("botanybooster:textures/blocks/second_sun_glass_6.png"),
+    };
     private static final ResourceLocation extra_tex = new ResourceLocation("botanybooster:textures/blocks/second_sun_extra.png");
 
     @Override
@@ -64,7 +72,7 @@ public class RenderTileSecondSun extends TileEntitySpecialRenderer<TileSecondSun
         GlStateManager.rotate(ticks * 0.6f, 0, 1, 0.2f);
 
         float outerScale = shellRadius[te.getCurrentTier()];
-        float innerScale = outerScale * 0.80f * te.getCurrentMana() / te.getCurrentManaCap() + 0.175f;
+        float innerScale = outerScale * (0.80f * te.getCurrentMana() / te.getCurrentManaCap() + 0.175f);
 
         GlStateManager.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
         GlStateManager.enableBlend();
@@ -74,7 +82,7 @@ public class RenderTileSecondSun extends TileEntitySpecialRenderer<TileSecondSun
         GlStateManager.callList(displayListId);
 
         GlStateManager.scale(outerScale/innerScale, outerScale/innerScale, outerScale/innerScale);
-        this.bindTexture(glass_tex);
+        this.bindTexture(glass_tex[te.getCurrentTier()]);
         GlStateManager.callList(displayListId);
 
         if(te.getCurrentTier() == 6) {

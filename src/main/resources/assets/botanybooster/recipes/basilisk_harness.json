@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "botanybooster:basilisk_harness"
+  },
+  "pattern": [
+    "CCC",
+    "SFS",
+    "E E"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "#CLOTHMANAWEAVE"
+    },
+    "C": {
+      "item": "#MANASTRING"
+    },
+    "F": {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    "E": {
+      "item": "minecraft:spider_eye"
+    }
+  }
+}

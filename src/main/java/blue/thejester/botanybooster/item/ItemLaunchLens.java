@@ -27,10 +27,11 @@ import java.util.List;
 
 public class ItemLaunchLens extends BaseItem implements ICompositableLens {
 
+    public static final String NAME = "lens_launch";
 
     public ItemLaunchLens() {
-        setRegistryName(new ResourceLocation(BotanyBooster.MODID, "launchLens"));
-        setTranslationKey("launchLens");
+        setRegistryName(new ResourceLocation(BotanyBooster.MODID, NAME));
+        setTranslationKey(NAME);
     }
     @Override
     public int getProps(ItemStack itemStack) {

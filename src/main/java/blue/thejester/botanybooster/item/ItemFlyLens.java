@@ -20,9 +20,11 @@ import java.util.List;
 
 public class ItemFlyLens extends BaseItem implements ICompositableLens {
 
+    public static final String NAME = "lens_fly";
+
     public ItemFlyLens() {
-        setRegistryName(new ResourceLocation(BotanyBooster.MODID, "flyLens"));
-        setTranslationKey("flyLens");
+        setRegistryName(new ResourceLocation(BotanyBooster.MODID, NAME));
+        setTranslationKey(NAME);
     }
     @Override
     public int getProps(ItemStack itemStack) {

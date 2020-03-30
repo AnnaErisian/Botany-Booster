@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "botanybooster:living_oil"
+  },
+  "pattern": [
+    "SSS",
+    "WSW",
+    " P "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:soul_sand"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "P": {
+      "item": "#MANAPEARL"
+    }
+  }
+}

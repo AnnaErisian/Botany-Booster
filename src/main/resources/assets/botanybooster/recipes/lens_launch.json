@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "botanybooster:lens_launch"
+  },
+  "pattern": [
+    " T ",
+    "FLF",
+    "RQR"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "T": {
+      "item": "minecraft:ghast_tear"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "L": {
+      "item": "botania:lens",
+      "data": 0
+    },
+    "R": {
+      "item": "minecraft:fireworks"
+    },
+    "Q": {
+      "item": "#GAIASPIRIT"
+    }
+  }
+}

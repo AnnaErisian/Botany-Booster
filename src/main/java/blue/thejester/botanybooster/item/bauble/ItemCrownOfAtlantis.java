@@ -41,9 +41,10 @@ public class ItemCrownOfAtlantis extends BaubleBaseItem implements IManaUsingIte
 
     private static final double SPEED_MULT = 1.2;
     private static final double MAX_SPEED = 1.3;
+    public static final String NAME = "crown_of_atlantis";
 
     public ItemCrownOfAtlantis() {
-        super("crown_of_atlantis");
+        super(NAME);
     }
     @Override
     public void onWornTick(ItemStack stack, EntityLivingBase player) {

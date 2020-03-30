@@ -37,9 +37,11 @@ import javax.annotation.Nonnull;
 
 public class ItemLongCorporeaSpark extends BaseItem implements IModelRegister {
 
+	public static final String NAME = "long_range_corporea_spark";
+
 	public ItemLongCorporeaSpark() {
-		setRegistryName(new ResourceLocation(BotanyBooster.MODID, "longCorporeaSpark"));
-		setTranslationKey("longCorporeaSpark");
+		setRegistryName(new ResourceLocation(BotanyBooster.MODID, NAME));
+		setTranslationKey(NAME);
 	}
 
 	@Nonnull

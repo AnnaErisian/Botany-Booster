@@ -27,9 +27,10 @@ public class ItemTinyWizardHat extends BaubleBaseItem implements IManaUsingItem 
 
     private static final double SPEED_MULT = 1.2;
     private static final double MAX_SPEED = 1.3;
+    public static final String NAME = "tiny_wizard_hat";
 
     public ItemTinyWizardHat() {
-        super("tiny_wizard_hat");
+        super(NAME);
     }
 
     @Override
@@ -42,7 +43,7 @@ public class ItemTinyWizardHat extends BaubleBaseItem implements IManaUsingItem 
                 if (wand.getItem() instanceof IManaStoringItem && !((IManaStoringItem) wand.getItem()).isManaFull(wand)) {
                     final int cost = 100;
                     if(ManaItemHandler.requestManaExact(hat, playerEnt, cost, false)) {
-                        ((IManaStoringItem) wand.getItem()).rechargeMana(wand, 1);
+                        ((IManaStoringItem) wand.getItem()).rechargeMana(wand, 2);
                         ManaItemHandler.requestManaExact(hat, playerEnt, cost, true);
                     }
                 }

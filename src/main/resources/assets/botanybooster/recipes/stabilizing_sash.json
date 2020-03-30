@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "botanybooster:stabilizing_sash"
+  },
+  "pattern": [
+    "SL ",
+    "L L",
+    "TLP"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "#RUNESLOTHB"
+    },
+    "P": {
+      "item": "#RUNEPRIDEB"
+    },
+    "L": {
+      "item": "#LEATHER"
+    },
+    "T": {
+      "item": "#INGOTTERRASTEEL"
+    }
+  }
+}

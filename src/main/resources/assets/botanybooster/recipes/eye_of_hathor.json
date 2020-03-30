@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "botanybooster:eye_of_hathor"
+  },
+  "pattern": [
+    "OEO",
+    "OSO",
+    " O "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "E": {
+      "item": "#RUNEEARTHB"
+    },
+    "S": {
+      "item": "minecraft:red_sandstone",
+      "data": 2
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "botanybooster:second_sun_upgrade0"
+  },
+  "pattern": [
+    "GRG",
+    "IQI",
+    "GRG"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "I": {
+      "item": "#INGOTTERRASTEEL"
+    },
+    "G": {
+      "item": "#GAIASPIRIT"
+    },
+    "R": {
+      "item": "botania:shimmerrock"
+    },
+    "Q": {
+      "item": "#QUARTZBLAZE"
+    }
+  }
+}

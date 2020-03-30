@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "botanybooster:long_range_corporea_spark"
+  },
+  "pattern": [
+    "I",
+    "S",
+    "I"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "botania:corporeaspark",
+      "data": 0
+    },
+    "I": {
+      "item": "#GAIASPIRIT"
+    }
+  }
+}

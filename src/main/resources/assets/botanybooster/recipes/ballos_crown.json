@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "botanybooster:ballos_crown"
+  },
+  "pattern": [
+    "CWC",
+    "CPC"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "C": {
+      "item": "#CLOTHMANAWEAVE"
+    },
+    "W": {
+      "item": "#RUNEWRATHB"
+    },
+    "P": {
+      "item": "#MANAPEARL"
+    }
+  }
+}

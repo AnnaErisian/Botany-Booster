@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "botanybooster:tiny_wizard_hat"
+  },
+  "pattern": [
+    " W ",
+    "CCC",
+    "WWW"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "C": {
+      "item": "ebwizardry:magic_crystal",
+      "data": 0
+    },
+    "W": {
+      "item": "#CLOTHMANAWEAVE"
+    }
+  }
+}

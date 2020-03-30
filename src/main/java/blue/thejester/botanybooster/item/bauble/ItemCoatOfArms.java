@@ -22,13 +22,14 @@ import vazkii.botania.common.entity.EntityMagicMissile;
 
 import java.util.List;
 
-public class ItemCoatOfArms extends BaubleBaseItem implements IManaUsingItem {
+public class ItemCoatOfArms extends BaubleBaseItem {
 
     private static final int COST = 40;
     private static final double RANGE = 5;
+    public static final String NAME = "coat_of_arms";
 
     public ItemCoatOfArms() {
-        super("coat_of_arms");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -56,11 +57,6 @@ public class ItemCoatOfArms extends BaubleBaseItem implements IManaUsingItem {
     @Override
     public BaubleType getBaubleType(ItemStack arg0) {
         return BaubleType.BODY;
-    }
-
-    @Override
-    public boolean usesMana(ItemStack stack) {
-        return true;
     }
 
 }

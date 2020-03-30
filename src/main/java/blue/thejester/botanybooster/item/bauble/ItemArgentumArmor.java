@@ -22,9 +22,10 @@ import vazkii.botania.common.entity.EntityMagicMissile;
 public class ItemArgentumArmor extends BaubleBaseItem implements IManaUsingItem {
 
     private static final int COST = 80;
+    public static final String NAME = "argentum_shoulderpad";
 
     public ItemArgentumArmor() {
-        super("argentum_shoulderpad");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

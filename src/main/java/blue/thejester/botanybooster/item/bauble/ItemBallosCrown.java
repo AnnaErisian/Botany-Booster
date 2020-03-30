@@ -30,8 +30,10 @@ import vazkii.botania.common.item.equipment.armor.elementium.ItemElementiumHelm;
  */
 public class ItemBallosCrown extends BaubleBaseItem {
 
+    public static final String NAME = "ballos_crown";
+
     public ItemBallosCrown() {
-        super("ballos_crown");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

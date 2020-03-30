@@ -26,10 +26,10 @@ public class ModPetalRecipe {
 
     public static void init(){
         orechidCunctusRecipe = BotaniaAPI.registerPetalRecipe(
-                ItemBlockSpecialFlower.ofType(SubTileOrechidCunctus.NAME), red, red, red, red,
-                runeFire, runeSummer, runeWrath);
+                ItemBlockSpecialFlower.ofType(SubTileOrechidCunctus.NAME),
+                LibOreDict.REDSTONE_ROOT, LibOreDict.LIFE_ESSENCE, runeGreed, runePride, red, blue, yellow, yellow);
         dryacinthRecipe = BotaniaAPI.registerPetalRecipe(
-                ItemBlockSpecialFlower.ofType(SubTileDryacinth.NAME), blue, blue, blue, blue,
-                runeWater, runeAutumn, runePride);
+                ItemBlockSpecialFlower.ofType(SubTileDryacinth.NAME),
+                LibOreDict.REDSTONE_ROOT, runeWrath, runeWater ,gray, gray, purple, purple, blue, blue);
     }
 }

@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "botanybooster:coat_of_arms"
+  },
+  "pattern": [
+    "WWW",
+    "SWS",
+    "RPR"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "W": {
+      "item": "#PURPLEWOOL"
+    },
+    "S": {
+      "item": "botania:elementiumsword"
+    },
+    "P": {
+      "item": "#GAIASPIRIT"
+    },
+    "R": {
+      "item": "#BREDSTRING"
+    }
+  }
+}

@@ -18,9 +18,10 @@ public class ItemSuperHopBelt extends BaubleBaseItem implements IManaUsingItem {
 
     private static final double LEAP_FACTOR = 0.6;
     private static final int COST = 3;
+    public static final String NAME = "belt_leaping";
 
     public ItemSuperHopBelt() {
-        super("belt_leaping");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

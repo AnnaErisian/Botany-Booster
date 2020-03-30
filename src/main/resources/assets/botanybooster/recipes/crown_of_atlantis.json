@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "botanybooster:crown_of_atlantis"
+  },
+  "pattern": [
+    "C C",
+    "MSM",
+    "MRM"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "M": {
+      "item": "#INGOTMANASTEEL"
+    },
+    "S": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "R": {
+      "item": "botania:waterring"
+    }
+  }
+}

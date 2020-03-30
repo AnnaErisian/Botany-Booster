@@ -1,0 +1,30 @@
+{
+  "result": {
+    "item": "botanybooster:consumption_charm"
+  },
+  "pattern": [
+    " A ",
+    "BRC",
+    " D "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "R": {
+      "item": "#RUNEGLUTTONYB"
+    },
+    "A": {
+      "item": "minecraft:fish",
+      "data": 3
+    },
+    "B": {
+      "item": "minecraft:golden_apple",
+      "data": 0
+    },
+    "C": {
+      "item": "minecraft:golden_carrot"
+    },
+    "D": {
+      "item": "minecraft:poisonous_potato"
+    }
+  }
+}

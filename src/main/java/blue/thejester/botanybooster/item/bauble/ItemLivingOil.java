@@ -22,9 +22,10 @@ import vazkii.botania.api.mana.ManaItemHandler;
 public class ItemLivingOil extends BaubleBaseItem implements IManaUsingItem {
 
     private static final int COST = 15;
+    public static final String NAME = "living_oil";
 
     public ItemLivingOil() {
-        super("living_oil");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

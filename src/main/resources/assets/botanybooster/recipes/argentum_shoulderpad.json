@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "botanybooster:argentum_shoulderpad"
+  },
+  "pattern": [
+    " LA",
+    "LRL",
+    " L "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "L": {
+      "item": "#CLOTHMANAWEAVE"
+    },
+    "A": {
+      "item": "botania:manasteelchest"
+    },
+    "R": {
+      "item": "#RUNEENVYB"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "botanybooster:second_sun_upgrade3"
+  },
+  "pattern": [
+    " G ",
+    "CQC",
+    " G "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "C": {
+      "item": "botanybooster:second_sun_upgrade2"
+    },
+    "G": {
+      "item": "#GAIASPIRIT"
+    },
+    "Q": {
+      "item": "minecraft:sponge",
+      "data": 0
+    }
+  }
+}

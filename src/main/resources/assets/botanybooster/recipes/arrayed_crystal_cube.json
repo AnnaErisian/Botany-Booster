@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "botanybooster:arrayed_crystal_cube"
+  },
+  "pattern": [
+    "S",
+    "G",
+    "W"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "botania:corporeaspark",
+      "data": 0
+    },
+    "G": {
+      "item": "botania:bifrostperm"
+    },
+    "W": {
+      "item": "#DREAMWOOD"
+    }
+  }
+}

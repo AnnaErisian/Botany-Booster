@@ -64,7 +64,8 @@ public class TileSecondSun extends TileEntity implements IManaPool, ISparkAttach
     private static final String TAG_MANA = "mana";
     private static final String TAG_KNOWN_MANA = "knownMana";
     private static final String TAG_COLOR = "color";
-    private static final int[] MANA_CAPS = {1000000 * 16, 1000000 * 32, 1000000 * 64, 1000000 * 128, 1000000 * 256, 1000000 * 1024, 1000000 * 2048};
+    private static final int[] MANA_CAPS = {1000000 * 16, 1000000 * 32, 1000000 * 64, 1000000 * 128, 1000000 * 256, 1000000 * 512, 1000000 * 2048};
+    private static final String TAG_TIER = "tier";
 
     int mana;
     public int tier;
@@ -81,6 +82,10 @@ public class TileSecondSun extends TileEntity implements IManaPool, ISparkAttach
     public TileSecondSun(int tier) {
         super();
         this.tier = tier;
+    }
+
+    public TileSecondSun() {
+        this(0);
     }
 
     @Override
@@ -225,7 +230,6 @@ public class TileSecondSun extends TileEntity implements IManaPool, ISparkAttach
         world.playSound(null, player.posX, player.posY, player.posZ, ModSounds.ding, SoundCategory.PLAYERS, 0.11F, 1F);
     }
 
-
     @Nonnull
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound par1nbtTagCompound) {
@@ -249,12 +253,13 @@ public class TileSecondSun extends TileEntity implements IManaPool, ISparkAttach
     public void writePacketNBT(NBTTagCompound cmp) {
         cmp.setInteger(TAG_MANA, mana);
         cmp.setInteger(TAG_COLOR, color.getMetadata());
-
+        cmp.setInteger(TAG_TIER, tier);
     }
 
     public void readPacketNBT(NBTTagCompound cmp) {
         mana = cmp.getInteger(TAG_MANA);
         color = EnumDyeColor.byMetadata(cmp.getInteger(TAG_COLOR));
+        tier = cmp.getInteger(TAG_TIER);
 
         if(cmp.hasKey(TAG_KNOWN_MANA))
             knownMana = cmp.getInteger(TAG_KNOWN_MANA);

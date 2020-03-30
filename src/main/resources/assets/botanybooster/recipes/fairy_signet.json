@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "botanybooster:fairy_signet"
+  },
+  "pattern": [
+    " P ",
+    "PWP",
+    " P "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "W": {
+      "item": "#RUNEWRATHB"
+    },
+    "P": {
+      "item": "#ELVENPIXIEDUST"
+    }
+  }
+}

@@ -1,19 +1,25 @@
 tile.botania:flower.dryacinth.name=Dryacinth
 tile.botania:flower.orechidCunctus.name=Orechid Cunctus
-tile.botania:second_sun_core0.name=Second Sun (Tier 0)
-tile.botania:second_sun_core1.name=Second Sun (Tier 1)
-tile.botania:second_sun_core2.name=Second Sun (Tier 2)
-tile.botania:second_sun_core3.name=Second Sun (Tier 3)
-tile.botania:second_sun_core4.name=Second Sun (Tier 4)
-tile.botania:second_sun_core5.name=Second Sun (Tier 5)
-tile.botania:second_sun_core6.name=Second Sun (Tier 6)
+tile.botania:second_sun_core0.name=Second Sun (1,000 Years)
+tile.botania:second_sun_core1.name=Second Sun (10,000 Years)
+tile.botania:second_sun_core2.name=Second Sun (100,000 Years)
+tile.botania:second_sun_core3.name=Second Sun (1,000,000 Years)
+tile.botania:second_sun_core4.name=Second Sun (10,000,000 Years)
+tile.botania:second_sun_core5.name=Second Sun (100,000,000 Years)
+tile.botania:second_sun_core6.name=Second Sun (Eternity)
+item.botanybooster:second_sun_upgrade0.name=Solar Bolster (9,000 Years)
+item.botanybooster:second_sun_upgrade1.name=Solar Bolster (90,000 Years)
+item.botanybooster:second_sun_upgrade2.name=Solar Bolster (900,000 Years)
+item.botanybooster:second_sun_upgrade3.name=Solar Bolster (9,000,000 Years)
+item.botanybooster:second_sun_upgrade4.name=Solar Bolster (90,000,000 Years)
+item.botanybooster:second_sun_upgrade5.name=Solar Bolster (6,000,000,000 Years)
 
 tile.botania:arrayed_crystal_cube.name=Clear Crystal Cube
 
-item.botanybooster:longCorporeaSpark.name=Long Range Corporea Spark
+item.botanybooster:long_range_corporea_spark.name=Long Range Corporea Spark
 
-item.botanybooster:launchLens.name=Lens of Launching
-item.botanybooster:flyLens.name=Lens of Flight
+item.botanybooster:lens_launch.name=Lens of Launching
+item.botanybooster:lens_fly.name=Lens of Flight
 item.botanybooster:crown_of_atlantis.name=Crown of Atlantis
 item.botanybooster:tiny_wizard_hat.name=Tiny Wizard's Hat
 item.botanybooster:ballos_crown.name=Ballos Crown
@@ -30,8 +36,102 @@ item.botanybooster:stabilizing_sash.name=Stabilizing Sash
 botanybooster.potion.bb_stabilized=Stabilized
 
 botania.entry.dryacinth=Dryacinth
-botania.page.dryacinth.0=Dryacinth Page 0
-botania.tagline.dryacinth=I'll use my frying flower for it's drying power
+botania.tagline.dryacinth=Prevents rain using mana
+botania.page.dryacinth0=Rain is annoying when one's other exploits depend on the might of the sun. The &1Dryacinth&0 is a flower that, using a little bit of &4Mana&0, blocks rain in a large radius.
+botania.page.dryacinth1=I'll use my frying flower for its drying power
+
 botania.entry.orechidCunctus=Orechid Cunctus
-botania.page.orechidCunctus.0=Orechid C Page 0
-botania.tagline.orechidCunctus=Everything is mine!  All of it!
+botania.tagline.orechidCunctus=Creates ores from many stones
+botania.page.orechidCunctus0=The Orechid is nice and all, but it can only create ores in normal overworld Stone - sometimes that won't do!  The &1Orechid Cunctus&0 can create ores in many sorts of stone, if properly configured.
+botania.page.orechidCunctus1=Everything is mine!  All mine!
+
+botania.entry.arrayed_crystal_cube=Clear Crystal Cube
+botania.tagline.arrayed_crystal_cube=View and request items from a Corporea network
+botania.page.arrayed_crystal_cube0=When you have a lot of &1Crystal Cubes&0, it can be hard to see what's in each of them.  This version renders the request item a bit larger, as well as making the crystal cube itself invisible.
+botania.page.arrayed_crystal_cube1=The rain is gone
+
+botania.entry.lens_fly=Lens of Flight
+botania.tagline.lens_fly=A Mana Lens that will carry you far
+botania.page.lens_fly0=Ever wish the &1Mana Lens: Influence&0 worked on you?  Well, here's your insane creation.  This lens fires a burst which will cary the non-sneaking player who fired it from a &1Mana Blaster&0 - from a spreader, it won't do much good.
+botania.page.lens_fly1=You STOLE Fizzy Lifting Drinks!
+
+botania.entry.lens_launch=Lens of Launching
+botania.tagline.lens_launch=A Mana Lens that will throw you
+botania.page.lens_launch0=Ever wish the &1Mana Lens: Influence&0 worked on you, and think it would be even more swell if combined with a &1Messenger Lens&0?  Well, this isn't quite that crazy.  This lens fires a very fast but short-lived burst which will cary the non-sneaking player who fired it from a &1Mana Blaster&0 - from a spreader, it won't do much good.
+botania.page.lens_launch1=This Pech empty! Yeet!
+
+botania.entry.second_sun_core=Second Sun
+botania.tagline.second_sun_core=Mana Storage for botanists without limits
+botania.page.second_sun_core0=Getting annoyed with the number of &1Mana Pools&0 you need to store your ever-growing supply of magical power?  The &1Second Sun&0 is here for you!  At the base level, the &1Second Sun&0 stores as much &4Mana&0 as 16 pools.  Each upgrade doubles the capacity - except the last, which quadruples it.
+botania.page.second_sun_core1=The beginning of something unreasonable
+botania.page.second_sun_core2=You're not that hot yet
+botania.page.second_sun_core3=A Mana capacity worthy of a gasp
+botania.page.second_sun_core4=Everybody relies on these, it seems
+botania.page.second_sun_core5=This might be free
+botania.page.second_sun_core6=One more roll! You've got nothing to bet with!
+botania.page.second_sun_core7=Do you actually need this?
+
+botania.entry.long_range_corporea_spark=Long Range Corporea Spark
+botania.tagline.long_range_corporea_spark=A Corporea Spark with better range.
+botania.page.long_range_corporea_spark0=Corporea networks are nice, but they'd be nicer if they could extend more than x blocks without random furnaces 3 blocks under the ground all over.  This does that - when forming a network, this spark searches 32 blocks.  Be sure to use one at both ends of the connection for maximum consistency.
+botania.page.long_range_corporea_spark1=Fiber optics
+
+botania.entry.argentum_shoulderpad=Argentum Pauldron
+botania.tagline.argentum_shoulderpad=Quickened Magic Missile
+botania.page.argentum_shoulderpad0=While this infernal creation does little to protect the wearer, it will fire a projectile each time the wearer attacks, at the cost of some &4Mana&0.
+botania.page.argentum_shoulderpad1=Quickened Magic Missile
+
+botania.entry.ballos_crown=Crown of Ballos
+botania.tagline.ballos_crown=Summon friendly heads
+botania.page.ballos_crown0=Similar to the &1Great Fairy Ring&0, the &1Crown of Ballos&0 may, when struck, spawn a Ballos Head to attack nearby foes.
+botania.page.ballos_crown1=So I merely gazed upon the spectacle
+
+botania.entry.basilisk_harness=Basilisk Harness
+botania.tagline.basilisk_harness=Steal life, but harm friends
+botania.page.basilisk_harness0=The wearer of the &1Basilisk Harness&0 will steal the life from struck foes.  However, interacting with animals will do those creatures harm.
+botania.page.basilisk_harness1=Harness both life and death
+
+botania.entry.belt_leaping=Belt of Leaping
+botania.tagline.belt_leaping=Jump upwards and forwards
+botania.page.belt_leaping0=Tired of the same old movement solution? Unlike the &1Soujourner's Sash&0, the &1Belt of Leaping&0 does not grant increased speed, instead causing your jump to propel you fowards as well as upwards, at the cost of some &4Mana&0.
+botania.page.belt_leaping1=Just a hop, skip, and a jump
+
+botania.entry.coat_of_arms=Coat of Arms
+botania.tagline.coat_of_arms=Deal more damage with friends
+botania.page.coat_of_arms0=The &1Coat of Arms&0 causes the wearer's attacks to deal an extra heart of damage for each other nearby player - alone, it's worthless, but with friends, it can be incredibly powerful.
+botania.page.coat_of_arms1=The power of friendship
+
+botania.entry.consumption_charm=Charm of Consumption
+botania.tagline.consumption_charm=Eat faster
+botania.page.consumption_charm0=The &1Charm of Consumption&0 causes the player to eat food faster.
+botania.page.consumption_charm1=Omnomnomnomnomnom
+
+botania.entry.crown_of_atlantis=Crown of Atlantis
+botania.tagline.crown_of_atlantis=Swim fast and avoid Guardian problems
+botania.page.crown_of_atlantis0=The &1Crown of Atlantis&0 is an upgrade to the &1Ring of Chordata&0 - in addition to the effects of the ring, nearby Guardians will also begin to infight.
+botania.page.crown_of_atlantis1=Something something trident
+
+botania.entry.eye_of_hathor=Eye of Hathor
+botania.tagline.eye_of_hathor=See animals able to breed
+botania.page.eye_of_hathor0=The &1Eye of Hathor&0 will, when the wearer is sneaking, show them which animals are ready to be bred.
+botania.page.eye_of_hathor1=Now kith
+
+botania.entry.fairy_signet=Fairy Signet
+botania.tagline.fairy_signet=Reflect projectiles with mana
+botania.page.fairy_signet0=The &1Fairy Signet&0 will, at the cost of a significant amount of mana, reflect any projectiles which would have hit the player
+botania.page.fairy_signet1=Don't stop me now
+
+botania.entry.living_oil=Living Oil
+botania.tagline.living_oil=Automatic retaliation
+botania.page.living_oil0=This set of liquid armor will lash out at anything foolish enough to hit you, sending them away and slowing them significantly, at the cost of some &4Mana&0.
+botania.page.living_oil1=A living slip-n-slide
+
+botania.entry.stabilizing_sash=Stabilizing Sash
+botania.tagline.stabilizing_sash=Become resilient when still
+botania.page.stabilizing_sash0=This item is the exact opposite of most sashes. When you stand still for a few seconds, you will resist three quarters of incoming damage but become slow to move. In addition, wearing this sash grants you immunity to knockback.
+botania.page.stabilizing_sash1=Stay where you are!
+
+botania.entry.tiny_wizard_hat=Tiny Wizard Hat
+botania.tagline.tiny_wizard_hat=Convert mana to wand mana
+botania.page.tiny_wizard_hat0=Every 3 seconds, this bauble will use &4Botania Mana&0 to recharge any non-full &4Wizardry Wand&0 in your hotbar a tiny bit.
+botania.page.tiny_wizard_hat1=A little bit of magic

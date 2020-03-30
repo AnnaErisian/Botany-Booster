@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "botanybooster:items/second_sun_upgrade_2"
+  }
+}

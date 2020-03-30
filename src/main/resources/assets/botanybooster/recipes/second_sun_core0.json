@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "botanybooster:second_sun_core0"
+  },
+  "pattern": [
+    "PIP",
+    "ROR",
+    "IGI"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "P": {
+      "item": "#RUNEPRIDEB"
+    },
+    "I": {
+      "item": "#INGOTGAIA"
+    },
+    "R": {
+      "item": "botania:shimmerrock"
+    },
+    "O": {
+      "item": "botania:pool",
+      "data": 3
+    },
+    "G": {
+      "item": "#RUNEGLUTTONYB"
+    }
+  }
+}

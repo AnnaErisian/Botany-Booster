@@ -1,0 +1,41 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"base": "botanybooster:blocks/second_sun_core",
+			"cloth": "botanybooster:blocks/second_sun_core",
+			"glass": "botanybooster:blocks/second_sun_core",
+			"particle": "botanybooster:blocks/second_sun_core"
+		}
+	},
+	"variants": {
+		"normal": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"tiers=zero": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"tiers=one": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"tiers=two": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"tiers=three": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"tiers=four": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"tiers=five": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"tiers=six": {
+			"model": "botanybooster:second_sun_core"
+		},
+		"inventory": [{
+			"model": "botanybooster:second_sun_core",
+			"transform": "forge:default-block"
+		}]
+	}
+}

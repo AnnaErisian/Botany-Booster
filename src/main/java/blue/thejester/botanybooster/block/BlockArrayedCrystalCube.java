@@ -13,6 +13,7 @@ package blue.thejester.botanybooster.block;
 import javax.annotation.Nonnull;
 
 import blue.thejester.botanybooster.block.tile.TileArrayedCrystalCube;
+import blue.thejester.botanybooster.core.LexiconData;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -48,14 +49,15 @@ import vazkii.botania.common.block.tile.TileSimpleInventory;
 import vazkii.botania.common.block.tile.corporea.TileCorporeaBase;
 import vazkii.botania.common.core.helper.InventoryHelper;
 import vazkii.botania.common.item.ModItems;
-import vazkii.botania.common.lexicon.LexiconData;
 
 public class BlockArrayedCrystalCube extends Block implements ILexiconable, IWandable, IModelRegister {
 
+	public static final String NAME = "arrayed_crystal_cube";
+
 	public BlockArrayedCrystalCube() {
 		super(Material.IRON);
-		setTranslationKey("arrayed_crystal_cube");
-		this.setRegistryName(new ResourceLocation("botanybooster", "arrayed_crystal_cube"));
+		setTranslationKey(NAME);
+		this.setRegistryName(new ResourceLocation("botanybooster", NAME));
 		setHardness(5.5F);
 		setSoundType(SoundType.METAL);
 		setDefaultState(blockState.getBaseState().withProperty(Properties.StaticProperty, true));
@@ -153,7 +155,7 @@ public class BlockArrayedCrystalCube extends Block implements ILexiconable, IWan
 
 	@Override
 	public LexiconEntry getEntry(World world, BlockPos pos, EntityPlayer player, ItemStack lexicon) {
-		return LexiconData.corporeaCrystalCube;
+		return LexiconData.clearCrystalCube;
 	}
 
 	@Override

@@ -15,10 +15,12 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import vazkii.botania.api.mana.IManaUsingItem;
 
-public class ItemFastEatCharm extends BaubleBaseItem implements IManaUsingItem {
+public class ItemFastEatCharm extends BaubleBaseItem{
+
+    public static final String NAME = "consumption_charm";
 
     public ItemFastEatCharm() {
-        super("consumption_charm");
+        super(NAME);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -38,10 +40,4 @@ public class ItemFastEatCharm extends BaubleBaseItem implements IManaUsingItem {
     public BaubleType getBaubleType(ItemStack arg0) {
         return BaubleType.CHARM;
     }
-
-    @Override
-    public boolean usesMana(ItemStack stack) {
-        return true;
-    }
-
 }

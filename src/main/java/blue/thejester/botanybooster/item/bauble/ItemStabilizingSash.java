@@ -21,6 +21,8 @@ import vazkii.botania.common.core.helper.ItemNBTHelper;
 
 public class ItemStabilizingSash extends BaubleBaseItem implements IManaUsingItem {
 
+    public static final String NAME = "stabilizing_sash";
+
     private static final String TAG_SAVED_X = "spx";
     private static final String TAG_SAVED_Y = "spy";
     private static final String TAG_SAVED_Z = "spz";
@@ -31,7 +33,7 @@ public class ItemStabilizingSash extends BaubleBaseItem implements IManaUsingIte
 
 
     public ItemStabilizingSash() {
-        super("stabilizing_sash");
+        super(NAME);
     }
 
     @Override
@@ -53,8 +55,9 @@ public class ItemStabilizingSash extends BaubleBaseItem implements IManaUsingIte
                     }
 
                 }
-            }else
+            }else {
                 setStopeedTicks(belt, 0);
+            }
             saveXPos(belt,player.lastTickPosX);
             saveYPos(belt,player.lastTickPosY);
             saveZPos(belt,player.lastTickPosZ);
@@ -62,9 +65,9 @@ public class ItemStabilizingSash extends BaubleBaseItem implements IManaUsingIte
     }
 
     private boolean closeEnough(ItemStack belt, EntityPlayer player) {
-        return Math.abs(getSavedX(belt) - player.posX) < 0.01
-                && Math.abs(getSavedY(belt) - player.posY) < 0.01
-                && Math.abs(getSavedZ(belt) - player.posZ) < 0.01;
+        return Math.abs(getSavedX(belt) - player.posX) < 0.03
+                && Math.abs(getSavedY(belt) - player.posY) < 0.03
+                && Math.abs(getSavedZ(belt) - player.posZ) < 0.03;
     }
 
     public double getSavedX(ItemStack stack) {
