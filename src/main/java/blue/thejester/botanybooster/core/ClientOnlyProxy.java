@@ -18,9 +18,10 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import vazkii.botania.api.BotaniaAPIClient;
 
-@Mod.EventBusSubscriber(modid = BotanyBooster.MODID)
 public class ClientOnlyProxy extends CommonProxy {
 
     @Override
@@ -35,14 +36,6 @@ public class ClientOnlyProxy extends CommonProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityBallosBall.class, RenderBallosBall::new);
 
         super.preInit();
-    }
-
-
-
-    @SubscribeEvent
-    public static void onModelRegistry(ModelRegistryEvent e) {
-        BotaniaAPIClient.registerSubtileModel(SubTileDryacinth.class, new ModelResourceLocation(BotanyBooster.MODID + ":dryacinth"));
-        BotaniaAPIClient.registerSubtileModel(SubTileOrechidCunctus.class, new ModelResourceLocation(BotanyBooster.MODID + ":orechidCunctus"));
     }
 
     @Override

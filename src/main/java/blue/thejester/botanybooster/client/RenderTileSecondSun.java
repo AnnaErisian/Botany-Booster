@@ -26,12 +26,15 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.Vec3d;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import vazkii.botania.client.model.ModelSpinningCubes;
 
 import javax.annotation.Nonnull;
 import java.lang.reflect.Field;
 
+@SideOnly(Side.CLIENT)
 public class RenderTileSecondSun extends TileEntitySpecialRenderer<TileSecondSun> {
 
     final ModelSpinningCubes cubes = new ModelSpinningCubes();

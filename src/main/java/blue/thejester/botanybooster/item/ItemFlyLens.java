@@ -25,6 +25,7 @@ public class ItemFlyLens extends BaseItem implements ICompositableLens {
     public ItemFlyLens() {
         setRegistryName(new ResourceLocation(BotanyBooster.MODID, NAME));
         setTranslationKey(NAME);
+        setMaxStackSize(1);
     }
     @Override
     public int getProps(ItemStack itemStack) {

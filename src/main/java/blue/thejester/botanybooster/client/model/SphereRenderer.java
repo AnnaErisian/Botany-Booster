@@ -2,8 +2,11 @@ package blue.thejester.botanybooster.client.model;
 
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.util.math.Vec3d;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import scala.actors.$bang;
 
+@SideOnly(Side.CLIENT)
 public class SphereRenderer {
 
     private static final double PHI = (Math.sqrt(5) + 1) / 2;

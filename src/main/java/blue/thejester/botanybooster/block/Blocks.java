@@ -6,13 +6,18 @@ import blue.thejester.botanybooster.block.subtile.functional.SubTileOrechidCunct
 import blue.thejester.botanybooster.block.tile.TileArrayedCrystalCube;
 import blue.thejester.botanybooster.block.tile.TileSecondSun;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.BotaniaAPIClient;
 import vazkii.botania.api.subtile.signature.BasicSignature;
 import vazkii.botania.client.lib.LibResources;
 import vazkii.botania.common.item.block.ItemBlockMod;
@@ -71,5 +76,12 @@ public class Blocks {
         evt.getRegistry().register(new ItemBlockMod(secondSunCore5).setRegistryName(secondSunCore5.getRegistryName()));
         evt.getRegistry().register(new ItemBlockMod(secondSunCore6).setRegistryName(secondSunCore6.getRegistryName()));
         GameRegistry.registerTileEntity(TileSecondSun.class, "botanybooster:" + BlockSecondSunCore.NAME);
+    }
+
+    @SubscribeEvent
+    @SideOnly(Side.CLIENT)
+    public static void onModelRegistry(ModelRegistryEvent e) {
+        BotaniaAPIClient.registerSubtileModel(SubTileDryacinth.class, new ModelResourceLocation(BotanyBooster.MODID + ":dryacinth"));
+        BotaniaAPIClient.registerSubtileModel(SubTileOrechidCunctus.class, new ModelResourceLocation(BotanyBooster.MODID + ":orechidCunctus"));
     }
 }

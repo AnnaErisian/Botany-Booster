@@ -32,6 +32,7 @@ public class ItemLaunchLens extends BaseItem implements ICompositableLens {
     public ItemLaunchLens() {
         setRegistryName(new ResourceLocation(BotanyBooster.MODID, NAME));
         setTranslationKey(NAME);
+        setMaxStackSize(1);
     }
     @Override
     public int getProps(ItemStack itemStack) {

@@ -7,6 +7,8 @@ import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.ARBShaderObjects;
 import org.lwjgl.opengl.GL11;
 import vazkii.botania.api.internal.ShaderCallback;
@@ -15,6 +17,7 @@ import vazkii.botania.client.lib.LibResources;
 
 import javax.annotation.Nonnull;
 
+@SideOnly(Side.CLIENT)
 public class RenderBallosBall extends RenderLiving<EntityBallosBall> {
 
     final ShaderCallback callback = shader -> {

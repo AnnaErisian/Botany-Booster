@@ -3,11 +3,14 @@ package blue.thejester.botanybooster.client.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * ModelBallosBall - Anna Erisian
  * Created using Tabula 7.1.0
  */
+@SideOnly(Side.CLIENT)
 public class ModelBallosBall extends ModelBase {
     public ModelRenderer core;
     public ModelRenderer spike_ur;

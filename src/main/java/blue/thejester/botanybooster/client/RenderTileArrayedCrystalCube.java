@@ -37,6 +37,8 @@ import net.minecraftforge.common.model.IModelState;
 import net.minecraftforge.common.model.animation.CapabilityAnimation;
 import net.minecraftforge.common.property.IExtendedBlockState;
 import net.minecraftforge.common.property.Properties;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.commons.lang3.tuple.Pair;
 import org.lwjgl.opengl.GL11;
 import vazkii.botania.client.core.handler.ClientTickHandler;
@@ -44,6 +46,7 @@ import vazkii.botania.client.core.handler.ClientTickHandler;
 import javax.annotation.Nonnull;
 import java.lang.reflect.Field;
 
+@SideOnly(Side.CLIENT)
 public class RenderTileArrayedCrystalCube extends TileEntitySpecialRenderer<TileArrayedCrystalCube> {
 
 	private EntityItem entity = null;

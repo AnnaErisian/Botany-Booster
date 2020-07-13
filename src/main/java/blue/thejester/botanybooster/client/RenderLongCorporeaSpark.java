@@ -24,12 +24,15 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import vazkii.botania.client.core.helper.IconHelper;
 import vazkii.botania.client.render.entity.RenderSparkBase;
 
 import javax.annotation.Nullable;
 
+@SideOnly(Side.CLIENT)
 public class RenderLongCorporeaSpark extends RenderSparkBase<EntityLongCorporeaSpark> {
 
 	public RenderLongCorporeaSpark(RenderManager manager) {
